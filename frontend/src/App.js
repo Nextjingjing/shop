@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { HomePage } from "./screens/HomePage";
 
 const App = () => {
   return (
@@ -9,8 +10,8 @@ const App = () => {
       <Header />
       <main>
         <Container className="py-3">
-          <h1>Welcome to the NEXTSHOP</h1>
         </Container>
+        <HomePage/>
       </main>
       <Footer/>
     </>
