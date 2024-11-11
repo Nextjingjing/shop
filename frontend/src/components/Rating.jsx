@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaStar,FaStarHalfAlt, FaRegStar } from 'react-icons/fa'
 
-export const Ratting = ( { value, text } ) => {
+export const Rating = ( { value, text } ) => {
   return (
     <div className='rating'>
         <span>
