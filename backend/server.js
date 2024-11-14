@@ -1,6 +1,7 @@
 import express from 'express';
 import products from './data/products.js';
 import dotenv from 'dotenv'
+import connectDB from './config/db.js';
 dotenv.config();
 const app = express();
 
@@ -27,4 +28,5 @@ app.get('/api/products/:id', (req, res) => {
 
 app.listen(port, ()=>{
     console.log(`sever is running on ${port}`);
+    connectDB();
 })
