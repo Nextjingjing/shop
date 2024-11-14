@@ -33,7 +33,7 @@ const orderSchema = new mongoose.Schema({
         id: {type: String},
         status: {type: String},
         update_time: {type: String},
-        email_adress: { type: String}
+        email_address: { type: String}
     },
     itemPrice: {
         type: Number,
@@ -75,3 +75,6 @@ const orderSchema = new mongoose.Schema({
     timestamps: true
 }
 );
+
+const Order = mongoose.model("Order", orderSchema);
+export default Order;
