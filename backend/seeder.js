@@ -47,6 +47,7 @@ const destroyData = async () =>{
     }
 }
 
+// console.log(process.argv);
 if(process.argv[2] === '-d'){
     destroyData();
 }else{
