@@ -21,3 +21,10 @@ const errorHandler = (err, req, res, next) =>{
 }
 
 export { notFound, errorHandler };
+
+``` 
+    Express ทำงานตามลำดับของ middleware ที่กำหนดในโค้ด
+มี 2 ประเภทของ middleware:
+1) Regular middleware: จัดการ request ปกติ (เช่น app.get() หรือ notFound)
+2) Error-handling middleware: จัดการ error โดยเฉพาะ (ต้องมีพารามิเตอร์ 4 ตัว err, req, res, next)
+```
