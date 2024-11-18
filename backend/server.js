@@ -37,9 +37,9 @@ app.listen(port, ()=>{
     จะไปเจอกับ middleware notFound และจะส่ง error นั้นด้วย next(error) 
     และส่ง error ไปยัง errorHandler 
 
-ปล. อาจจะต้องดูไฟล์ {
+ปล. อาจจะต้องดูไฟล์ประกอบคำอธิบายด้วย {
     backend/middleware/errorMiddleware.js,
     backend/middleware/asyncHandler.js
-} ประกอบคำอธิบายด้วย
+} 
 
 ```
