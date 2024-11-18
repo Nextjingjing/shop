@@ -6,14 +6,7 @@ import { getProducts, getProductsById } from '../controllers/productController.j
 
 const router = express.Router();
 
-router.get('/', asyncHandler(async (req, res)=>{
-    getProducts();
-})
-);
-
-router.get('/:id', asyncHandler( async(req, res) => {
-    getProductsById();
-})
-);
+router.route('/').get(getProducts);
+router.route('/:id').get(getProductsById)
 
 export default router;
