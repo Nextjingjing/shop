@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem } from 'react-bootstrap';
 import { Rating } from '../components/Rating';
 import { useGetProductsDetailsQuery } from '../slices/apiProductsSlice';
+import Message from '../components/Message';
 import Loader from '../components/Loader.jsx';
+
+
 
 const ProductPage = () => {
     const { id: productId } = useParams();
@@ -22,7 +25,7 @@ const ProductPage = () => {
         { isLoading ? (
             <Loader/>
         ) : error ? (
-            <div>{error?.data?.message || error.error}</div>
+            <Message variant='danger'>{ error?.data?.message || error.error }</Message>
         ): (
             <>
             <Row>

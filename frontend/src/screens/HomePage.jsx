@@ -6,13 +6,15 @@ import Product from '../components/ProductComponent'
 import axios from 'axios'
 import { useGetProductsQuery } from '../slices/apiProductsSlice';
 import Loader from '../components/Loader'
+import Message from '../components/Message'
+
 
 export const HomePage = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
 
   return (
     <>
-    {isLoading? (<Loader/>) : error ? (<div>{ error?.data?.message || error.error }</div>): (
+    {isLoading? (<Loader/>) : error ? (<Message variant='danger'>{ error?.data?.message || error.error }</Message>): (
       <>
       <h1>Latest Product</h1>
         <Row>
