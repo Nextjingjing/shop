@@ -21,7 +21,7 @@ const ProductPage = () => {
         { isLoading ? (
             <h2>Loading...</h2>
         ) : error ? (
-            <div>{error?.data?.message || error}</div>
+            <div>{error?.data?.message || error.error}</div>
         ): (
             <>
             <Row>
