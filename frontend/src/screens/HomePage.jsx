@@ -5,13 +5,14 @@ import {Row, Col} from 'react-bootstrap'
 import Product from '../components/ProductComponent'
 import axios from 'axios'
 import { useGetProductsQuery } from '../slices/apiProductsSlice';
+import Loader from '../components/Loader'
 
 export const HomePage = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
 
   return (
     <>
-    {isLoading? (<div>Loading...</div>) : error ? (<div>{ error?.data?.message || error.error }</div>): (
+    {isLoading? (<Loader/>) : error ? (<div>{ error?.data?.message || error.error }</div>): (
       <>
       <h1>Latest Product</h1>
         <Row>
